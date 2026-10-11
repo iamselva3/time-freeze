@@ -326,4 +326,15 @@ export default defineConfig({
     port: 5174,
     host: true,
   },
+  build: {
+    chunkSizeWarningLimit: 1200,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          lucide: ['lucide-react'],
+        },
+      },
+    },
+  },
 });
