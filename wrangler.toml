@@ -1,0 +1,22 @@
+name = "time-freeze"
+main = "src/worker/index.js"
+compatibility_date = "2026-09-01"
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+run_worker_first = ["/api/*", "/media/*"]
+
+[vars]
+WHATSAPP_NUMBER = "+919025299312"
+ALLOWED_ORIGIN = "*"
+R2_BUCKET_NAME = "time-freeze"
+
+# Cloudflare KV & R2 Storage Bindings
+[[kv_namespaces]]
+binding = "TIME_FREEZE_META"
+id = "cf7b6ce6316d4d9c9fefd5ffa9d5ffbe"
+
+[[r2_buckets]]
+binding = "TIME_FREEZE_PHOTOS"
+bucket_name = "time-freeze"

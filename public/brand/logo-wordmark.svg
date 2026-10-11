@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 120" width="620" height="120" fill="none">
+  <defs>
+    <linearGradient id="wmGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF6DB" />
+      <stop offset="40%" stop-color="#FCE095" />
+      <stop offset="75%" stop-color="#E8C57A" />
+      <stop offset="100%" stop-color="#C99F55" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Monogram Icon -->
+  <g transform="translate(10, 15) scale(0.14)">
+    <image href="/brand/logo-gold-monogram.png" width="898" height="613" />
+  </g>
+
+  <!-- Vertical Divider Line -->
+  <line x1="150" y1="28" x2="150" y2="92" stroke="url(#wmGold)" stroke-width="1" opacity="0.35" />
+
+  <!-- Typography Lockup -->
+  <text x="175" y="62" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="34" font-weight="600" letter-spacing="8" fill="url(#wmGold)">
+    TIME FREEZE
+  </text>
+  <text x="178" y="86" font-family="'Inter', -apple-system, sans-serif" font-size="10.5" font-weight="400" letter-spacing="9" fill="#E8C57A" opacity="0.8">
+    FINE ART PHOTOGRAPHY
+  </text>
+</svg>

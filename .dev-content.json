@@ -1,0 +1,249 @@
+{
+  "general": {
+    "studioName": "Time Freeze",
+    "tagline": "A moment held perfectly still.",
+    "phone": "+91 90252 99312",
+    "whatsappNumber": "+919025299312",
+    "email": "studio@timefreeze.in",
+    "address": "18 Heritage Palace Enclave, West Veli Street, Madurai, Tamil Nadu 625001",
+    "secondaryStudio": "Race Course Road, Coimbatore, Tamil Nadu 641018",
+    "instagramUrl": "https://instagram.com/time_freeze__",
+    "photographer": "Bhuvan (@bhuvan.official)"
+  },
+  "splash": {
+    "enabled": true,
+    "durationMs": 3200,
+    "kicker": "TIME FREEZE PHOTOGRAPHY",
+    "tagline": "A moment held perfectly still."
+  },
+  "hero": {
+    "kicker": "FINE ART & SACRED WEDDINGS",
+    "titleLine1": "TIME FREEZES.",
+    "titleLine2Em": "LOVE",
+    "titleLine2Text": "ENDURES.",
+    "description": "Unposed elegance, painterly golden light, and heirloom photographs for the days you never want to let go.",
+    "ctaText": "Book Your Shoot",
+    "ctaLink": "#contact",
+    "cutoutImage": "/media/hero-cutout",
+    "watermarkText": "TIME FREEZE",
+    "portraitCaption": "AUTHENTIC CONNECTION — TIMELESS STILLNESS",
+    "specialitiesTitle": "CURATED EXPERIENCES",
+    "specialities": [
+      "SACRED WEDDINGS",
+      "MATERNITY & BABIES",
+      "HERITAGE PORTRAITS",
+      "CINEMA REEL",
+      "CANDID MOMENTS"
+    ],
+    "sideDescription": "Quiet guidance, natural light, and photographs that feel like poetry.",
+    "sideScrollText": "EXPLORE THE CHAPTERS",
+    "stats": [
+      {
+        "icon": "✦",
+        "number": 240,
+        "suffix": "+",
+        "label": "WEDDINGS"
+      },
+      {
+        "icon": "◈",
+        "number": 99,
+        "suffix": "%",
+        "label": "HAPPY FAMILIES"
+      },
+      {
+        "icon": "◉",
+        "number": 10,
+        "suffix": "+",
+        "label": "YEARS OF CRAFT"
+      },
+      {
+        "icon": "▲",
+        "number": 16,
+        "suffix": "+",
+        "label": "CITIES VISITED"
+      }
+    ]
+  },
+  "story": {
+    "eyebrow": "OUR PHILOSOPHY — CHAPTER 01",
+    "titleLead": "Life happens in the",
+    "titleAccent": "unspoken second.",
+    "paragraph1": "A shy glance across a bustling wedding mandap, the sudden quiet tear when sacred vows are tied, the spontaneous laughter before flower petals settle on the ground. These are not scripted poses — they are the sacred fragments of your living history.",
+    "paragraph2": "At Time Freeze, we do not force stiff poses or manufacture artificial smiles. We step back as quiet observers, harnessing warm directional ambient light and rich, painterly South Indian tones so your grandchildren feel the warmth of today fifty years from now.",
+    "photographerName": "Bhuvan",
+    "photographerTitle": "Founder & Principal Artist",
+    "linkText": "Discover our deliberate process",
+    "linkHref": "#process"
+  },
+  "frozenMoments": {
+    "eyebrow": "MOMENTS SUSPENDED — CHAPTER 02",
+    "heading": "The Stillness of Time.",
+    "subheading": "As each frame glides into focus, motion slows and the emotion is held frozen in golden-ratio balance."
+  },
+  "chapters": {
+    "eyebrow": "PORTFOLIO CHAPTERS — 03",
+    "heading": "Three realms of emotion.",
+    "categories": [
+      {
+        "id": "Weddings",
+        "title": "Sacred Weddings",
+        "subtitle": "Muhurthams, heirloom silks & intimate vows",
+        "count": "240+ stories",
+        "coverImage": "/media/hero-timeless-vows"
+      },
+      {
+        "id": "Baby & Kids",
+        "title": "Baby & Beginning",
+        "subtitle": "Maternity serenity, first birthdays & pure wonder",
+        "count": "120+ stories",
+        "coverImage": "/media/and-baby-makes-three"
+      },
+      {
+        "id": "Candid & Moments",
+        "title": "Candid & Heritage",
+        "subtitle": "Street poetry, temple light & human character",
+        "count": "80+ stories",
+        "coverImage": "/media/madurai-solitude-wisdom"
+      }
+    ]
+  },
+  "cinema": {
+    "eyebrow": "CINEMATIC REEL — CHAPTER 04",
+    "headingLead": "Moments that",
+    "headingAccent": "breathe in 4K.",
+    "description": "Photography halts the tender second; cinema preserves the rhythm of the bride's laugh, the tremor in the groom's vow, and the timeless dholak beats of your celebration.",
+    "videoUrl": "",
+    "posterUrl": "/media/hero-timeless-vows"
+  },
+  "process": {
+    "eyebrow": "OUR ARTISAN PROCESS — CHAPTER 05",
+    "headingLead": "From first hello to",
+    "headingAccent": "heirloom treasure.",
+    "description": "Great photography is born from trust and feeling at ease. Here is how we craft your visual heirloom, step by unhurried step.",
+    "steps": [
+      {
+        "num": "01",
+        "lead": "Share",
+        "accent": "your heart.",
+        "description": "We meet over coffee or video call to listen to your story, family traditions, and what memories matter most to your heart."
+      },
+      {
+        "num": "02",
+        "lead": "The Light &",
+        "accent": "The Timeline.",
+        "description": "We orchestrate lighting plans, golden-hour timelines, and location scouting so you never feel rushed during your celebrations."
+      },
+      {
+        "num": "03",
+        "lead": "Be in",
+        "accent": "the moment.",
+        "description": "During rituals we remain unobtrusive observers. When couple portraits happen, gentle warm guidance makes you forget the camera entirely."
+      },
+      {
+        "num": "04",
+        "lead": "Keep it",
+        "accent": "for fifty years.",
+        "description": "Your color-graded archival digital gallery and handcrafted velvet heirloom album box arrive ready to relive across generations."
+      }
+    ]
+  },
+  "packages": {
+    "eyebrow": "INVESTMENT & CURATIONS — 06",
+    "headingLead": "Thoughtful collections for",
+    "headingAccent": "lasting memories.",
+    "subtitle": "Every family celebration has its unique rhythm. Below are our starting frameworks; we tailor coverage to your bespoke itinerary.",
+    "note": "All collections include handcrafted color grading, full-resolution downloads, and an archival online client vault.",
+    "packages": [
+      {
+        "eyebrow": "THE INTIMATE SESSION",
+        "title": "Milestone & Maternity.",
+        "price": "₹35,000",
+        "period": "Half-Day Session",
+        "text": "Designed for maternity portraits, newborn milestones, cake smashes, and intimate couple editorial sessions.",
+        "items": [
+          "Up to 3 hours of daylight studio or outdoor location coverage",
+          "One bespoke styled concept and moodboard consultation",
+          "35 hand-retouched signature fine-art digital portraits",
+          "Private high-resolution online gallery with download access",
+          "Full personal printing & heirloom rights"
+        ],
+        "action": "Inquire for Milestone Shoot",
+        "featured": false
+      },
+      {
+        "eyebrow": "THE SIGNATURE HEIRLOOM",
+        "title": "The Wedding Story.",
+        "price": "₹1,45,000",
+        "period": "Full Day Wedding & Muhurtham",
+        "text": "Our most coveted curation for wedding days, sacred muhurthams, and evening reception celebrations.",
+        "items": [
+          "Dual senior lead photography team (candid + traditional craft)",
+          "Full-day coverage from dawn rituals to evening celebrations",
+          "Teaser highlight preview gallery delivered within 5 days",
+          "350+ signature color-graded high-resolution photographs",
+          "Handmade 12x18 archival leather-bound velvet album (40 pages)",
+          "Pre-wedding couple shoot included complimentary"
+        ],
+        "action": "Reserve Your Wedding Date",
+        "featured": true
+      },
+      {
+        "eyebrow": "THE GRAND DESTINATION",
+        "title": "Two-Day Celebration & Cinema.",
+        "price": "₹2,65,000",
+        "period": "Multi-Day Complete Coverage",
+        "text": "For destination weddings, multi-ceremony celebrations (Haldi, Sangeet, Muhurtham, Reception) with 4K cinema films.",
+        "items": [
+          "Complete multi-shooter photo & 4K cinema team across 2 full days",
+          "Cinematic 4K wedding teaser film + 20-minute feature narrative",
+          "Drone aerial cinematography (subject to venue permission)",
+          "Two archival master albums + two miniature parents' albums",
+          "Raw archival footage vault delivered on dedicated SSD"
+        ],
+        "action": "Inquire for Destination Wedding",
+        "featured": false
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "HEARTFELT WORDS",
+    "heading": "Loved by couples and families across Tamil Nadu.",
+    "list": [
+      {
+        "quote": "Time Freeze made our wedding day in Madurai feel like an unhurried dream. When we opened our heirloom gallery, we could literally feel the warmth of the temple lamps and the joyful tears all over again. Pure magic.",
+        "name": "DIVYA & ARJUN",
+        "place": "MADURAI",
+        "photo": "/media/hero-timeless-vows?w=480&fmt=webp"
+      },
+      {
+        "quote": "Bhuvan and his team have this supernatural ability to become invisible during the emotional moments. Our outdoor sunset session felt completely natural, zero stiff poses, just real us.",
+        "name": "ANANYA & ROHIT",
+        "place": "COIMBATORE",
+        "photo": "/media/open-breeze-golden-light?w=480&fmt=webp"
+      },
+      {
+        "quote": "From our maternity shoot to little Athvitha's first birthday, Time Freeze is our family's forever storyteller. The craft and respect they bring to traditional South Indian rituals is unmatched.",
+        "name": "POOJA & VIKRAM",
+        "place": "CHENNAI",
+        "photo": "/media/and-baby-makes-three?w=480&fmt=webp"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "LET'S BEGIN — 07",
+    "headingLead": "Let us hold your moment",
+    "headingAccent": "forever still.",
+    "description": "Tell us about your wedding date, your family milestone, or the portrait you have been dreaming of. We would be honored to preserve your legacy.",
+    "cityTitle": "MADURAI, COIMBATORE & DESTINATIONS",
+    "availability": "Available throughout South India and destination celebrations across India.",
+    "hoursText": "Tuesday — Sunday, 09:30 AM — 08:00 PM IST",
+    "phoneLabel": "DIRECT LINE",
+    "emailLabel": "STUDIO DESK",
+    "hoursLabel": "STUDIO HOURS",
+    "submitButtonText": "Send Your Note to the Studio"
+  },
+  "footer": {
+    "tagline": "Time Freeze — A moment held perfectly still.",
+    "copyright": "© 2026 Time Freeze Photography Studio. All rights reserved."
+  }
+}

@@ -1,0 +1,660 @@
+[
+  {
+    "id": "tf-hero-timeless-vows",
+    "slug": "hero-timeless-vows",
+    "category": "Weddings",
+    "chapter": "01",
+    "title": "Timeless Vows in Temple Gold",
+    "subtitle": "Sacred muhurtham in pure heirloom silk",
+    "alt": "Traditional couple fine art portrait by Time Freeze Studio",
+    "client": "Divya & Arjun",
+    "location": "Madurai Heritage Palace",
+    "date": "December 2025",
+    "story": "Captured at golden sunrise amidst ambient temple lamps, preserving the stillness and depth of a once-in-a-lifetime vow.",
+    "dimensions": {
+      "width": 1200,
+      "height": 1500
+    },
+    "orientation": "portrait",
+    "aspectRatio": 0.8,
+    "dominantColor": "#9e9983",
+    "lqip": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACQAwCdASoUABkAPyl8tFOuJ6Uit/qoAcAlCWcAuwAh33UddegAAP6K4kCytx4IHh801seAlRNzyKT9GJBGwSPDH2cfjkZFTb/LAwAA",
+    "key": "time-freeze/weddings/hero-timeless-vows/1200.webp",
+    "thumbnailKey": "time-freeze/weddings/hero-timeless-vows/480.webp",
+    "url": "/media/hero-timeless-vows",
+    "thumbnailUrl": "/media/hero-timeless-vows?w=480&fmt=webp",
+    "variants": {
+      "webp": {
+        "480": "/media/hero-timeless-vows?w=480&fmt=webp",
+        "800": "/media/hero-timeless-vows?w=800&fmt=webp",
+        "1200": "/media/hero-timeless-vows?w=1200&fmt=webp"
+      },
+      "avif": {
+        "480": "/media/hero-timeless-vows?w=480&fmt=avif",
+        "800": "/media/hero-timeless-vows?w=800&fmt=avif",
+        "1200": "/media/hero-timeless-vows?w=1200&fmt=avif"
+      }
+    },
+    "availableWidths": [
+      480,
+      800,
+      1200
+    ],
+    "featured": true,
+    "isCover": true,
+    "order": 0,
+    "visibility": true,
+    "createdAt": "2026-10-11T14:03:56.863Z"
+  },
+  {
+    "id": "tf-between-shy-smiles-forever",
+    "slug": "between-shy-smiles-forever",
+    "category": "Weddings",
+    "chapter": "01",
+    "title": "Where Love Found Its Forever",
+    "subtitle": "Quiet grace and unhurried smiles",
+    "alt": "Bride and groom intimate candid ceremony portrait by Time Freeze Studio",
+    "client": "Kavya & Pradeep",
+    "location": "Chettinad Heritage Mansion",
+    "date": "November 2025",
+    "story": "Between shy glances and warm laughter, their connection unfolded gently in the soft afternoon verandah light.",
+    "dimensions": {
+      "width": 1200,
+      "height": 1499
+    },
+    "orientation": "portrait",
+    "aspectRatio": 0.801,
+    "dominantColor": "#5e6562",
+    "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQBACdASoUABkAPyWEtFOuKaUit/qoAcAkiWMAzYQh2APzBRZHhRDNgL0AAP65CqrF8JVGL3EaxH+Vps3+PFQ1sWRghQ4TFchAAA==",
+    "key": "time-freeze/weddings/between-shy-smiles-forever/1200.webp",
+    "thumbnailKey": "time-freeze/weddings/between-shy-smiles-forever/480.webp",
+    "url": "/media/between-shy-smiles-forever",
+    "thumbnailUrl": "/media/between-shy-smiles-forever?w=480&fmt=webp",
+    "variants": {
+      "webp": {
+        "480": "/media/between-shy-smiles-forever?w=480&fmt=webp",
+        "800": "/media/between-shy-smiles-forever?w=800&fmt=webp",
+        "1200": "/media/between-shy-smiles-forever?w=1200&fmt=webp"
+      },
+      "avif": {
+        "480": "/media/between-shy-smiles-forever?w=480&fmt=avif",
+        "800": "/media/between-shy-smiles-forever?w=800&fmt=avif",
+        "1200": "/media/between-shy-smiles-forever?w=1200&fmt=avif"
+      }
+    },
+    "availableWidths": [
+      480,
+      800,
+      1200
+    ],
+    "featured": true,
+    "isCover": false,
+    "order": 1,
+    "visibility": true,
+    "createdAt": "2026-10-11T14:04:01.705Z"
+  },
+  {
+    "id": "tf-open-breeze-golden-light",
+    "slug": "open-breeze-golden-light",
+    "category": "Weddings",
+    "chapter": "01",
+    "title": "Where Love Meets the Open Breeze",
+    "subtitle": "Golden hour warmth and open skies",
+    "alt": "Sunset outdoor pre-wedding session by Time Freeze Studio",
+    "client": "Ananya & Rohit",
+    "location": "Anamalai Foothills, Tamil Nadu",
+    "date": "January 2026",
+    "story": "Wind whispering through the trees, genuine unposed laughter, and a sunset that cast an amber glow over everything.",
+    "dimensions": {
+      "width": 1200,
+      "height": 1500
+    },
+    "orientation": "portrait",
+    "aspectRatio": 0.8,
+    "dominantColor": "#9ea18f",
+    "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAwCdASoUABkAPzmEt1UvKCUjMBgMAeAnCWcAACyY/vdB9SzuaYAA/lF0xF/f4yb1QXxSJdlVcNBaV5aJ2sWQawvz2rZwAsNwAA==",
+    "key": "time-freeze/weddings/open-breeze-golden-light/1200.webp",
+    "thumbnailKey": "time-freeze/weddings/open-breeze-golden-light/480.webp",
+    "url": "/media/open-breeze-golden-light",
+    "thumbnailUrl": "/media/open-breeze-golden-light?w=480&fmt=webp",
+    "variants": {
+      "webp": {
+        "480": "/media/open-breeze-golden-light?w=480&fmt=webp",
+        "800": "/media/open-breeze-golden-light?w=800&fmt=webp",
+        "1200": "/media/open-breeze-golden-light?w=1200&fmt=webp"
+      },
+      "avif": {
+        "480": "/media/open-breeze-golden-light?w=480&fmt=avif",
+        "800": "/media/open-breeze-golden-light?w=800&fmt=avif",
+        "1200": "/media/open-breeze-golden-light?w=1200&fmt=avif"
+      }
+    },
+    "availableWidths": [
+      480,
+      800,
+      1200
+    ],
+    "featured": true,
+    "isCover": false,
+    "order": 2,
+    "visibility": true,
+    "createdAt": "2026-10-11T14:04:07.284Z"
+  },
+  {
+    "id": "tf-sacred-vows-intimate",
+    "slug": "sacred-vows-intimate",
+    "category": "Weddings",
+    "chapter": "01",
+    "title": "Sacred Petals & Gentle Touch",
+    "subtitle": "Candid wedding moments held in stillness",
+    "alt": "Emotional couple embrace during wedding rituals by Time Freeze",
+    "client": "Divya & Arjun",
+    "location": "Madurai",
+    "date": "December 2025",
+    "story": "Every tradition holds an unspoken depth. We remain quiet observers so the true memory stays untarnished.",
+    "dimensions": {
+      "width": 1170,
+      "height": 1462
+    },
+    "orientation": "portrait",
+    "aspectRatio": 0.8,
+    "dominantColor": "#bcbdb8",
+    "lqip": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAwBACdASoUABkAPzmQvlcvKaYjqAqp4CcJaQAALoMLNkUNQPqIPEpw5AAA/sM8W3DOuHG8kZoOyIExFbBEvCwPRQVdiAAAAAA=",
+    "key": "time-freeze/weddings/sacred-vows-intimate/1170.webp",
+    "thumbnailKey": "time-freeze/weddings/sacred-vows-intimate/480.webp",
+    "url": "/media/sacred-vows-intimate",
+    "thumbnailUrl": "/media/sacred-vows-intimate?w=480&fmt=webp",
+    "variants": {
+      "webp": {
+        "480": "/media/sacred-vows-intimate?w=480&fmt=webp",
+        "800": "/media/sacred-vows-intimate?w=800&fmt=webp",
+        "1170": "/media/sacred-vows-intimate?w=1170&fmt=webp"
+      },
+      "avif": {
+        "480": "/media/sacred-vows-intimate?w=480&fmt=avif",
+        "800": "/media/sacred-vows-intimate?w=800&fmt=avif",
+        "1170": "/media/sacred-vows-intimate?w=1170&fmt=avif"
+      }
+    },
+    "availableWidths": [
+      480,
+      800,
+      1170
+    ],
+    "featured": false,
+    "isCover": false,
+    "order": 3,
+    "visibility": true,
+    "createdAt": "2026-10-11T14:04:11.020Z"
+  },
+  {
+    "id": "tf-and-baby-makes-three",
+    "slug": "and-baby-makes-three",
+    "category": "Baby & Kids",
+    "chapter": "02",
+    "title": "And Baby Makes Three",
+    "subtitle": "Maternal serenity and quiet anticipation",
+    "alt": "Fine art maternity indoor shoot by Time Freeze Studio",
+    "client": "Pooja & Vikram",
+    "location": "Time Freeze Studio, Madurai",
+    "date": "February 2026",
+    "story": "Gentle morning light illuminating the curve of expectant life, celebrating the calm before a joyous beginning.",
+    "dimensions": {
+      "width": 1170,
+      "height": 1463
+    },
+    "orientation": "portrait",
+    "aspectRatio": 0.8,
+    "dominantColor": "#92857b",
+    "lqip": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAwCdASoUABkAPzmIulOvKSWisBgMAeAnCWcAxkAPFSOZ5dbjX/oAAP2XOGlfAZMB7wO+atwKytPGG3sohwLEH1V+R7rBli4DSAAA",
+    "key": "time-freeze/baby---kids/and-baby-makes-three/1170.webp",
+    "thumbnailKey": "time-freeze/baby---kids/and-baby-makes-three/480.webp",
+    "url": "/media/and-baby-makes-three",
+    "thumbnailUrl": "/media/and-baby-makes-three?w=480&fmt=webp",
+    "variants": {
+      "webp": {
+        "480": "/media/and-baby-makes-three?w=480&fmt=webp",
+        "800": "/media/and-baby-makes-three?w=800&fmt=webp",
+        "1170": "/media/and-baby-makes-three?w=1170&fmt=webp"
+      },
+      "avif": {
+        "480": "/media/and-baby-makes-three?w=480&fmt=avif",
+        "800": "/media/and-baby-makes-three?w=800&fmt=avif",
+        "1170": "/media/and-baby-makes-three?w=1170&fmt=avif"
+      }
+    },
+    "availableWidths": [
+      480,
+      800,
+      1170
+    ],
+    "featured": true,
+    "isCover": true,
+    "order": 4,
+    "visibility": true,
+    "createdAt": "2026-10-11T14:04:17.323Z"
+  },
+  {
+    "id": "tf-athvitha-birthday-stories",
+    "slug": "athvitha-birthday-stories",
+    "category": "Baby & Kids",
+    "chapter": "02",
+    "title": "Heaven Sent Down to Earth",
+    "subtitle": "Athvitha milestone celebration & pure innocence",
+    "alt": "Child fine art portrait by Time Freeze Studio",
+    "client": "Little Athvitha",
+    "location": "Madurai Botanical Courtyard",
+    "date": "January 2026",
+    "story": "Eyes wide with wonder and genuine laughter. Childhood passes in a blink; here it is held forever still.",
+    "dimensions": {
+      "width": 1170,
+      "height": 1463
+    },
+    "orientation": "portrait",
+    "aspectRatio": 0.8,
+    "dominantColor": "#644f87",
+    "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAwCdASoUABkAPzmCulOvKCWsMBgMAeAnCWIAtsgPFbfpeMLRaVXQAP6iU/yazL//pCwKK9wwNcqa8pkgDkPs/mB8dX+cXKr+E12TMtRptt1vfBY8AgAA",
+    "key": "time-freeze/baby---kids/athvitha-birthday-stories/1170.webp",
+    "thumbnailKey": "time-freeze/baby---kids/athvitha-birthday-stories/480.webp",
+    "url": "/media/athvitha-birthday-stories",
+    "thumbnailUrl": "/media/athvitha-birthday-stories?w=480&fmt=webp",
+    "variants": {
+      "webp": {
+        "480": "/media/athvitha-birthday-stories?w=480&fmt=webp",
+        "800": "/media/athvitha-birthday-stories?w=800&fmt=webp",
+        "1170": "/media/athvitha-birthday-stories?w=1170&fmt=webp"
+      },
+      "avif": {
+        "480": "/media/athvitha-birthday-stories?w=480&fmt=avif",
+        "800": "/media/athvitha-birthday-stories?w=800&fmt=avif",
+        "1170": "/media/athvitha-birthday-stories?w=1170&fmt=avif"
+      }
+    },
+    "availableWidths": [
+      480,
+      800,
+      1170
+    ],
+    "featured": true,
+    "isCover": false,
+    "order": 5,
+    "visibility": true,
+    "createdAt": "2026-10-11T14:04:23.062Z"
+  },
+  {
+    "id": "tf-gentle-maternity-embrace",
+    "slug": "gentle-maternity-embrace",
+    "category": "Baby & Kids",
+    "chapter": "02",
+    "title": "The Maternal Embrace",
+    "subtitle": "Tender expectations and loving hands",
+    "alt": "Maternity portrait session by Time Freeze Studio",
+    "client": "Pooja & Vikram",
+    "location": "Time Freeze Studio",
+    "date": "February 2026",
+    "story": "Soft textures, warm directional daylight, and the sacred bond between parents waiting for their miracle.",
+    "dimensions": {
+      "width": 1170,
+      "height": 1463
+    },
+    "orientation": "portrait",
+    "aspectRatio": 0.8,
+    "dominantColor": "#232c35",
+    "lqip": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwBACdASoUABkAPyWCslOuKSSit/qoAcAkiWUAzFgh4ZZSuFJB1w3cAChQCbwAAP7ukMf7sc9ECbckTumVuXvgo77Egfo0YAA=",
+    "key": "time-freeze/baby---kids/gentle-maternity-embrace/1170.webp",
+    "thumbnailKey": "time-freeze/baby---kids/gentle-maternity-embrace/480.webp",
+    "url": "/media/gentle-maternity-embrace",
+    "thumbnailUrl": "/media/gentle-maternity-embrace?w=480&fmt=webp",
+    "variants": {
+      "webp": {
+        "480": "/media/gentle-maternity-embrace?w=480&fmt=webp",
+        "800": "/media/gentle-maternity-embrace?w=800&fmt=webp",
+        "1170": "/media/gentle-maternity-embrace?w=1170&fmt=webp"
+      },
+      "avif": {
+        "480": "/media/gentle-maternity-embrace?w=480&fmt=avif",
+        "800": "/media/gentle-maternity-embrace?w=800&fmt=avif",
+        "1170": "/media/gentle-maternity-embrace?w=1170&fmt=avif"
+      }
+    },
+    "availableWidths": [
+      480,
+      800,
+      1170
+    ],
+    "featured": false,
+    "isCover": false,
+    "order": 6,
+    "visibility": true,
+    "createdAt": "2026-10-11T14:04:29.998Z"
+  },
+  {
+    "id": "tf-haldi-stories-golden-joy",
+    "slug": "haldi-stories-golden-joy",
+    "category": "Weddings",
+    "chapter": "01",
+    "title": "Haldi Stories — Golden Joy",
+    "subtitle": "Euphoric marigold petals and festive cheer",
+    "alt": "Vibrant Haldi celebration captured by Time Freeze",
+    "client": "Nishanth & Nandha",
+    "location": "Coimbatore Heritage Lawn",
+    "date": "November 2025",
+    "story": "Laughter erupting like sunlight as loved ones shower yellow turmeric blossoms upon the smiling groom.",
+    "dimensions": {
+      "width": 1170,
+      "height": 1463
+    },
+    "orientation": "portrait",
+    "aspectRatio": 0.8,
+    "dominantColor": "#727959",
+    "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAwCdASoUABkAPzmYwlovKqckKAgB4CcJZgCuHAisBbq3sb4hPI1EAOrT5AM+zn1MHS3uccCFJQ0Y1/sYsUtUTnynxyC2PqZv4H8O2F3wdXAH87gAAA==",
+    "key": "time-freeze/weddings/haldi-stories-golden-joy/1170.webp",
+    "thumbnailKey": "time-freeze/weddings/haldi-stories-golden-joy/480.webp",
+    "url": "/media/haldi-stories-golden-joy",
+    "thumbnailUrl": "/media/haldi-stories-golden-joy?w=480&fmt=webp",
+    "variants": {
+      "webp": {
+        "480": "/media/haldi-stories-golden-joy?w=480&fmt=webp",
+        "800": "/media/haldi-stories-golden-joy?w=800&fmt=webp",
+        "1170": "/media/haldi-stories-golden-joy?w=1170&fmt=webp"
+      },
+      "avif": {
+        "480": "/media/haldi-stories-golden-joy?w=480&fmt=avif",
+        "800": "/media/haldi-stories-golden-joy?w=800&fmt=avif",
+        "1170": "/media/haldi-stories-golden-joy?w=1170&fmt=avif"
+      }
+    },
+    "availableWidths": [
+      480,
+      800,
+      1170
+    ],
+    "featured": true,
+    "isCover": false,
+    "order": 7,
+    "visibility": true,
+    "createdAt": "2026-10-11T14:04:36.682Z"
+  },
+  {
+    "id": "tf-marigold-haldi-laughter",
+    "slug": "marigold-haldi-laughter",
+    "category": "Weddings",
+    "chapter": "01",
+    "title": "Marigold Haldi Cascade",
+    "subtitle": "Unfiltered happiness in vivid yellow",
+    "alt": "Haldi splashing and candid smiles by Time Freeze Studio",
+    "client": "Nishanth & Nandha",
+    "location": "Coimbatore",
+    "date": "November 2025",
+    "story": "Pure energy, genuine surprise, and color so rich it leaps straight from the frame.",
+    "dimensions": {
+      "width": 1170,
+      "height": 1463
+    },
+    "orientation": "portrait",
+    "aspectRatio": 0.8,
+    "dominantColor": "#a3a595",
+    "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABwBACdASoUABkAPzmOulOvKqWisBgMAeAnCUAYUAIdWFMSBWZLawdaFu7sAAD+sFeGn0QWHnV1vHPuI8byNao8J9t8skYVpPIiwGhr1zvXLg6YrcgAI9QAAAA=",
+    "key": "time-freeze/weddings/marigold-haldi-laughter/1170.webp",
+    "thumbnailKey": "time-freeze/weddings/marigold-haldi-laughter/480.webp",
+    "url": "/media/marigold-haldi-laughter",
+    "thumbnailUrl": "/media/marigold-haldi-laughter?w=480&fmt=webp",
+    "variants": {
+      "webp": {
+        "480": "/media/marigold-haldi-laughter?w=480&fmt=webp",
+        "800": "/media/marigold-haldi-laughter?w=800&fmt=webp",
+        "1170": "/media/marigold-haldi-laughter?w=1170&fmt=webp"
+      },
+      "avif": {
+        "480": "/media/marigold-haldi-laughter?w=480&fmt=avif",
+        "800": "/media/marigold-haldi-laughter?w=800&fmt=avif",
+        "1170": "/media/marigold-haldi-laughter?w=1170&fmt=avif"
+      }
+    },
+    "availableWidths": [
+      480,
+      800,
+      1170
+    ],
+    "featured": false,
+    "isCover": false,
+    "order": 8,
+    "visibility": true,
+    "createdAt": "2026-10-11T14:04:43.136Z"
+  },
+  {
+    "id": "tf-traditions-blessings-precious",
+    "slug": "traditions-blessings-precious",
+    "category": "Heritage & Portraits",
+    "chapter": "03",
+    "title": "Traditions & Blessings",
+    "subtitle": "Heirloom ethnic portraiture and fine art lighting",
+    "alt": "Traditional South Indian ritual portrait by Time Freeze Studio",
+    "client": "Meenakshi & Family",
+    "location": "Madurai Heritage Hall",
+    "date": "October 2025",
+    "story": "Ancestral blessings, jasmine garlands, and family heritage preserved with editorial craft.",
+    "dimensions": {
+      "width": 1170,
+      "height": 1461
+    },
+    "orientation": "portrait",
+    "aspectRatio": 0.801,
+    "dominantColor": "#b88872",
+    "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwBACdASoUABkAPzmEuVOvKCWisAgB4CcJaACdMyX86BOhIb4UmGQ9CgAA/J8/PWdhjQtmW601nbJjpVctJyQNVPAKi2SsmoOb0dqSGUKJ/GzdEx8LHfKHiVUBIIch4YjYAA==",
+    "key": "time-freeze/heritage---portraits/traditions-blessings-precious/1170.webp",
+    "thumbnailKey": "time-freeze/heritage---portraits/traditions-blessings-precious/480.webp",
+    "url": "/media/traditions-blessings-precious",
+    "thumbnailUrl": "/media/traditions-blessings-precious?w=480&fmt=webp",
+    "variants": {
+      "webp": {
+        "480": "/media/traditions-blessings-precious?w=480&fmt=webp",
+        "800": "/media/traditions-blessings-precious?w=800&fmt=webp",
+        "1170": "/media/traditions-blessings-precious?w=1170&fmt=webp"
+      },
+      "avif": {
+        "480": "/media/traditions-blessings-precious?w=480&fmt=avif",
+        "800": "/media/traditions-blessings-precious?w=800&fmt=avif",
+        "1170": "/media/traditions-blessings-precious?w=1170&fmt=avif"
+      }
+    },
+    "availableWidths": [
+      480,
+      800,
+      1170
+    ],
+    "featured": true,
+    "isCover": true,
+    "order": 9,
+    "visibility": true,
+    "createdAt": "2026-10-11T14:04:48.979Z"
+  },
+  {
+    "id": "tf-beauty-in-the-everyday",
+    "slug": "beauty-in-the-everyday",
+    "category": "Candid & Moments",
+    "chapter": "03",
+    "title": "Beauty in the Everyday",
+    "subtitle": "Chiaroscuro ambient lighting and quiet presence",
+    "alt": "Atmospheric candid portrait by Time Freeze Studio",
+    "client": "Fine Art Editorial",
+    "location": "Madurai Temple Street",
+    "date": "January 2026",
+    "story": "Light filtering through ancient teak doors, illuminating a peaceful pause in the flow of time.",
+    "dimensions": {
+      "width": 1170,
+      "height": 1463
+    },
+    "orientation": "portrait",
+    "aspectRatio": 0.8,
+    "dominantColor": "#796b61",
+    "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQBACdASoUABkAPzmWwFovKqakKAgB4CcJZwDBzA2NHlGQn8Kh8/F6gADcPHeXONGrLe6qZc/TwHi0F+QDw2dWhfLDPRJcJQZ1yOr4AAA=",
+    "key": "time-freeze/candid---moments/beauty-in-the-everyday/1170.webp",
+    "thumbnailKey": "time-freeze/candid---moments/beauty-in-the-everyday/480.webp",
+    "url": "/media/beauty-in-the-everyday",
+    "thumbnailUrl": "/media/beauty-in-the-everyday?w=480&fmt=webp",
+    "variants": {
+      "webp": {
+        "480": "/media/beauty-in-the-everyday?w=480&fmt=webp",
+        "800": "/media/beauty-in-the-everyday?w=800&fmt=webp",
+        "1170": "/media/beauty-in-the-everyday?w=1170&fmt=webp"
+      },
+      "avif": {
+        "480": "/media/beauty-in-the-everyday?w=480&fmt=avif",
+        "800": "/media/beauty-in-the-everyday?w=800&fmt=avif",
+        "1170": "/media/beauty-in-the-everyday?w=1170&fmt=avif"
+      }
+    },
+    "availableWidths": [
+      480,
+      800,
+      1170
+    ],
+    "featured": true,
+    "isCover": false,
+    "order": 10,
+    "visibility": true,
+    "createdAt": "2026-10-11T14:04:55.598Z"
+  },
+  {
+    "id": "tf-kick-of-being-performer",
+    "slug": "kick-of-being-performer",
+    "category": "Candid & Moments",
+    "chapter": "03",
+    "title": "The Performer's Soul",
+    "subtitle": "Dynamic motion frozen in golden stage light",
+    "alt": "Stage artist dramatic motion freeze portrait by Time Freeze",
+    "client": "Classical Performer",
+    "location": "Madurai Auditorium",
+    "date": "December 2025",
+    "story": "The exact microsecond of peak expression—sweat, spirit, and stage intensity suspended in amber light.",
+    "dimensions": {
+      "width": 1170,
+      "height": 780
+    },
+    "orientation": "landscape",
+    "aspectRatio": 1.5,
+    "dominantColor": "#3c2c0f",
+    "lqip": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAABwAwCdASoUABkAPzmSwFovKaakKAgB4CcJZQCo9BZmAwmMfYAA/uwvE+eNHRkqRavTlzJ2NVAlFM4lXPqO4hMytsRxqRcAAAA=",
+    "key": "time-freeze/candid---moments/kick-of-being-performer/1170.webp",
+    "thumbnailKey": "time-freeze/candid---moments/kick-of-being-performer/480.webp",
+    "url": "/media/kick-of-being-performer",
+    "thumbnailUrl": "/media/kick-of-being-performer?w=480&fmt=webp",
+    "variants": {
+      "webp": {
+        "480": "/media/kick-of-being-performer?w=480&fmt=webp",
+        "800": "/media/kick-of-being-performer?w=800&fmt=webp",
+        "1170": "/media/kick-of-being-performer?w=1170&fmt=webp"
+      },
+      "avif": {
+        "480": "/media/kick-of-being-performer?w=480&fmt=avif",
+        "800": "/media/kick-of-being-performer?w=800&fmt=avif",
+        "1170": "/media/kick-of-being-performer?w=1170&fmt=avif"
+      }
+    },
+    "availableWidths": [
+      480,
+      800,
+      1170
+    ],
+    "featured": true,
+    "isCover": false,
+    "order": 11,
+    "visibility": true,
+    "createdAt": "2026-10-11T14:05:00.290Z"
+  },
+  {
+    "id": "tf-madurai-solitude-wisdom",
+    "slug": "madurai-solitude-wisdom",
+    "category": "Candid & Moments",
+    "chapter": "03",
+    "title": "Wisdom in the Ancient Courtyard",
+    "subtitle": "Soulful documentary portrait in historic Madurai",
+    "alt": "Elderly gentleman contemplative portrait in Madurai by Time Freeze",
+    "client": "Madurai Heritage Series",
+    "location": "Madurai Old City",
+    "date": "September 2025",
+    "story": "Eight decades of living written into honest facial lines, illuminated by the timeless Tamil sun.",
+    "dimensions": {
+      "width": 1170,
+      "height": 1463
+    },
+    "orientation": "portrait",
+    "aspectRatio": 0.8,
+    "dominantColor": "#7a7a7a",
+    "lqip": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACQBACdASoUABkAPzGCtVOuqKUit/VYAdAmCWkAACDaHlsnOeyWg899QDRH2qAA4j0kTwqBBfKgObzrq+3rnOl43gM5zhWgAAA=",
+    "key": "time-freeze/candid---moments/madurai-solitude-wisdom/1170.webp",
+    "thumbnailKey": "time-freeze/candid---moments/madurai-solitude-wisdom/480.webp",
+    "url": "/media/madurai-solitude-wisdom",
+    "thumbnailUrl": "/media/madurai-solitude-wisdom?w=480&fmt=webp",
+    "variants": {
+      "webp": {
+        "480": "/media/madurai-solitude-wisdom?w=480&fmt=webp",
+        "800": "/media/madurai-solitude-wisdom?w=800&fmt=webp",
+        "1170": "/media/madurai-solitude-wisdom?w=1170&fmt=webp"
+      },
+      "avif": {
+        "480": "/media/madurai-solitude-wisdom?w=480&fmt=avif",
+        "800": "/media/madurai-solitude-wisdom?w=800&fmt=avif",
+        "1170": "/media/madurai-solitude-wisdom?w=1170&fmt=avif"
+      }
+    },
+    "availableWidths": [
+      480,
+      800,
+      1170
+    ],
+    "featured": true,
+    "isCover": true,
+    "order": 12,
+    "visibility": true,
+    "createdAt": "2026-10-11T14:05:05.456Z"
+  },
+  {
+    "id": "tf-ancient-madurai-heritage-portrait",
+    "slug": "ancient-madurai-heritage-portrait",
+    "category": "Candid & Moments",
+    "chapter": "03",
+    "title": "Heirloom Heritage of Madurai",
+    "subtitle": "Timeless presence captured in natural ambient shadow",
+    "alt": "Fine art documentary portrait by Time Freeze Studio",
+    "client": "Madurai Heritage Series",
+    "location": "Madurai Old City",
+    "date": "September 2025",
+    "story": "A meditative study in stillness. Photography is the only art that halts the passage of time without altering the truth.",
+    "dimensions": {
+      "width": 1170,
+      "height": 1463
+    },
+    "orientation": "portrait",
+    "aspectRatio": 0.8,
+    "dominantColor": "#424242",
+    "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAwBACdASoUABkAPzGCtlOuqKUit/VYAdAmCWkAACkha8PYQ56Akjd8iAAA+nE1Voy/UVx6ozJ3kpOZy8H9sc8uoJv/AAAA",
+    "key": "time-freeze/candid---moments/ancient-madurai-heritage-portrait/1170.webp",
+    "thumbnailKey": "time-freeze/candid---moments/ancient-madurai-heritage-portrait/480.webp",
+    "url": "/media/ancient-madurai-heritage-portrait",
+    "thumbnailUrl": "/media/ancient-madurai-heritage-portrait?w=480&fmt=webp",
+    "variants": {
+      "webp": {
+        "480": "/media/ancient-madurai-heritage-portrait?w=480&fmt=webp",
+        "800": "/media/ancient-madurai-heritage-portrait?w=800&fmt=webp",
+        "1170": "/media/ancient-madurai-heritage-portrait?w=1170&fmt=webp"
+      },
+      "avif": {
+        "480": "/media/ancient-madurai-heritage-portrait?w=480&fmt=avif",
+        "800": "/media/ancient-madurai-heritage-portrait?w=800&fmt=avif",
+        "1170": "/media/ancient-madurai-heritage-portrait?w=1170&fmt=avif"
+      }
+    },
+    "availableWidths": [
+      480,
+      800,
+      1170
+    ],
+    "featured": false,
+    "isCover": false,
+    "order": 13,
+    "visibility": true,
+    "createdAt": "2026-10-11T14:05:11.158Z"
+  }
+]
