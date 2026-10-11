@@ -47,34 +47,34 @@ export default function ContactSection({ content }) {
     'https://wa.me/919025299312?text=Hello%20Time%20Freeze%20Studio!%20I%20would%20like%20to%20inquire%20about%20booking%20a%20photography%20session.';
 
   return (
-    <section id="contact" className="relative w-full min-h-screen bg-[#120C0C] pt-28 pb-12 px-6 sm:px-12 lg:px-20 select-none">
+    <section id="contact" className="relative w-full min-h-screen bg-[#120C0C] pt-16 sm:pt-28 pb-12 px-4 sm:px-12 lg:px-20 select-none overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-noise opacity-30 pointer-events-none" />
-      <div className="absolute top-1/3 left-10 w-[500px] h-[500px] rounded-full bg-oxblood-800/20 blur-[180px] pointer-events-none" />
+      <div className="absolute top-1/3 left-10 w-[min(500px,90vw)] h-[min(500px,90vw)] rounded-full bg-oxblood-800/20 blur-[180px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full">
         {/* Header */}
-        <div className="text-left max-w-2xl mb-16">
-          <div className="inline-flex items-center gap-2.5 text-gold-400 mb-3">
+        <div className="text-left max-w-2xl mb-10 sm:mb-16">
+          <div className="inline-flex items-center gap-2.5 text-gold-400 mb-2 sm:mb-3">
             <span className="font-sans text-[10px] tracking-super-wide uppercase">
               CHAPTER 08 — THE CONVERSATION
             </span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-5xl text-[#FDFBF7] font-light leading-tight">
+          <h2 className="font-serif text-2xl sm:text-5xl text-[#FDFBF7] font-light leading-tight">
             Let us hold your moment{' '}
             <span className="italic font-normal text-gold-gradient block sm:inline">
               forever still.
             </span>
           </h2>
-          <p className="font-sans text-xs sm:text-sm text-ivory-200/75 mt-4 tracking-wide leading-relaxed font-light">
+          <p className="font-sans text-xs sm:text-sm text-ivory-200/75 mt-3 sm:mt-4 tracking-wide leading-relaxed font-light">
             Tell us about your wedding date, your milestone, or the portrait you have been dreaming of. We would be honored to preserve your legacy.
           </p>
         </div>
 
         {/* Two-Column Grid: Form Left, Studio Details Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           {/* Left Column: Inquiry Form (7 cols) */}
-          <div className="lg:col-span-7 glass-panel p-8 sm:p-12 rounded-3xl border border-gold-500/25">
+          <div className="lg:col-span-7 glass-panel p-5 sm:p-12 rounded-3xl border border-gold-500/25">
             {submitted ? (
               <div className="py-12 text-center">
                 <div className="w-16 h-16 rounded-full bg-oxblood-900/60 border border-gold-400/50 flex items-center justify-center mx-auto mb-6 text-gold-300">
@@ -243,7 +243,7 @@ export default function ContactSection({ content }) {
             </div>
 
             {/* Studio Addresses */}
-            <div className="glass-panel p-8 rounded-3xl border border-gold-500/20 space-y-6 text-left">
+            <div className="glass-panel p-5 sm:p-8 rounded-3xl border border-gold-500/20 space-y-5 sm:space-y-6 text-left">
               <div className="flex items-start gap-3.5">
                 <MapPin size={16} className="text-gold-400 shrink-0 mt-1" />
                 <div>

@@ -44,7 +44,7 @@ export default function ReviewsSection({ content }) {
   const next = () => setCurrentIndex((c) => (c + 1) % REVIEWS.length);
 
   return (
-    <section className="relative w-full min-h-[85vh] bg-[#0E0707] py-24 px-6 sm:px-12 lg:px-20 overflow-hidden flex items-center justify-center select-none">
+    <section className="relative w-full min-h-[75vh] sm:min-h-[85vh] bg-[#0E0707] py-16 sm:py-24 px-4 sm:px-12 lg:px-20 overflow-hidden flex items-center justify-center select-none">
       {/* Background Blurred Image with slow zoom */}
       <div className="absolute inset-0 overflow-hidden">
         {REVIEWS.map((rev, i) => (
@@ -62,18 +62,18 @@ export default function ReviewsSection({ content }) {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto w-full text-center">
-        <div className="inline-flex items-center gap-2.5 text-gold-400 mb-6">
+        <div className="inline-flex items-center gap-2.5 text-gold-400 mb-4 sm:mb-6">
           <span className="font-sans text-[10px] tracking-super-wide uppercase">
             HEARTFELT WORDS · CLIENT STORIES
           </span>
         </div>
 
         {/* Big subtle gold quote symbol */}
-        <Quote size={54} className="mx-auto text-gold-400/25 mb-4" />
+        <Quote size={36} className="mx-auto text-gold-400/25 mb-3 sm:mb-4 sm:w-14 sm:h-14" />
 
         {/* Crossfading Quote text */}
-        <div className="min-h-[160px] flex items-center justify-center">
-          <p className="font-serif text-xl sm:text-2xl md:text-3xl font-light text-ivory-50 leading-relaxed italic transition-all duration-700">
+        <div className="min-h-[120px] sm:min-h-[160px] flex items-center justify-center px-2">
+          <p className="font-serif text-lg sm:text-2xl md:text-3xl font-light text-ivory-50 leading-relaxed italic transition-all duration-700">
             “{active.quote}”
           </p>
         </div>

@@ -34,6 +34,8 @@ function TiltCard({ pkg, isFeatured }) {
     setGlarePos((prev) => ({ ...prev, opacity: 0 }));
   };
 
+  const isTouch = typeof window !== 'undefined' && ('ontouchstart' in window || window.innerWidth < 768);
+
   const whatsappMessage = encodeURIComponent(
     `Hello Time Freeze Studio! I would like to inquire about the "${pkg.title}" package (${pkg.price}).`
   );
@@ -41,16 +43,20 @@ function TiltCard({ pkg, isFeatured }) {
   return (
     <div
       ref={cardRef}
-      onMouseMove={onMouseMove}
-      onMouseLeave={onMouseLeave}
-      className={`relative rounded-3xl p-8 sm:p-10 transition-transform duration-200 ease-out flex flex-col justify-between ${
+      onMouseMove={isTouch ? undefined : onMouseMove}
+      onMouseLeave={isTouch ? undefined : onMouseLeave}
+      className={`relative rounded-3xl p-6 sm:p-10 transition-transform duration-200 ease-out flex flex-col justify-between ${
         isFeatured
           ? 'glass-panel-deep border-2 border-gold-400/60 shadow-oxblood-deep'
           : 'glass-panel border border-gold-500/25'
       }`}
-      style={{
-        transform: `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg)`,
-      }}
+      style={
+        isTouch
+          ? undefined
+          : {
+              transform: `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg)`,
+            }
+      }
       data-cursor="TILT"
     >
       {/* Glare Sheen Reflection */}
@@ -182,10 +188,10 @@ export default function PackagesSection({ content }) {
   ];
 
   return (
-    <section id="packages" className="relative w-full min-h-screen bg-[#0E0D0C] py-28 px-6 sm:px-12 lg:px-20 select-none">
+    <section id="packages" className="relative w-full min-h-screen bg-[#0E0D0C] py-16 sm:py-28 px-4 sm:px-12 lg:px-20 select-none overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-noise opacity-30 pointer-events-none" />
-      <div className="absolute top-1/2 right-10 w-[600px] h-[600px] rounded-full bg-gold-500/10 blur-[180px] pointer-events-none" />
+      <div className="absolute top-1/2 right-10 w-[min(500px,90vw)] h-[min(500px,90vw)] rounded-full bg-gold-500/10 blur-[180px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full">
         {/* Header */}

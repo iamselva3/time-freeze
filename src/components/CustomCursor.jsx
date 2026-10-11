@@ -81,7 +81,7 @@ export default function CustomCursor() {
   if (!isVisible) return null;
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden">
+    <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden hidden md:block">
       {/* Outer Magnetic Ring */}
       <div
         ref={cursorRingRef}

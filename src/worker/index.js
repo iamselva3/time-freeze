@@ -1,3 +1,6 @@
+import manifestPhotos from "../data/manifest.json";
+import { DEFAULT_SITE_CONTENT } from "../data/defaultSiteContent.js";
+
 const PHOTO_INDEX = "photos:index";
 const MAX_IMAGE_BYTES = 15 * 1024 * 1024;
 const TOKEN_LIFETIME_SECONDS = 8 * 60 * 60;
@@ -84,7 +87,7 @@ const getPhotos = async (env) => {
       console.warn("Could not retrieve photos from KV:", e);
     }
   }
-  return [];
+  return manifestPhotos;
 };
 
 const savePhotos = async (env, photos) => {
@@ -98,12 +101,12 @@ const getContent = async (env) => {
   if (env && env.TIME_FREEZE_META) {
     try {
       const stored = await env.TIME_FREEZE_META.get("site:content", "json");
-      if (stored) return stored;
+      if (stored && Object.keys(stored).length > 0) return stored;
     } catch (e) {
       console.warn("Could not retrieve site content from KV:", e);
     }
   }
-  return {};
+  return DEFAULT_SITE_CONTENT;
 };
 
 const saveContent = async (env, content) => {
@@ -410,12 +413,15 @@ const handleApi = async (request, env, url) => {
 };
 
 const handleMedia = async (request, env, url) => {
+  // 1. Hero cutouts / brand assets
   if (url.pathname === "/media/hero-cutout" || url.pathname === "/media/hero-cutout.png") {
     if (!env || !env.TIME_FREEZE_PHOTOS) return new Response("Not found", { status: 404 });
     const object = await env.TIME_FREEZE_PHOTOS.get("time-freeze/brand/hero-cutout.png");
     if (!object) return new Response("Not found", { status: 404 });
-    const headers = new Headers(object.httpMetadata);
+    const headers = new Headers(object.httpMetadata || {});
+    headers.set("content-type", "image/png");
     headers.set("cache-control", "public, max-age=31536000, immutable");
+    if (object.httpEtag) headers.set("etag", object.httpEtag);
     return new Response(request.method === "HEAD" ? null : object.body, { headers });
   }
 
@@ -423,8 +429,10 @@ const handleMedia = async (request, env, url) => {
     if (!env || !env.TIME_FREEZE_PHOTOS) return new Response("Not found", { status: 404 });
     const object = await env.TIME_FREEZE_PHOTOS.get("time-freeze/brand/hero-cutout-2.png");
     if (!object) return new Response("Not found", { status: 404 });
-    const headers = new Headers(object.httpMetadata);
+    const headers = new Headers(object.httpMetadata || {});
+    headers.set("content-type", "image/png");
     headers.set("cache-control", "public, max-age=31536000, immutable");
+    if (object.httpEtag) headers.set("etag", object.httpEtag);
     return new Response(request.method === "HEAD" ? null : object.body, { headers });
   }
 
@@ -432,29 +440,116 @@ const handleMedia = async (request, env, url) => {
     if (!env || !env.TIME_FREEZE_PHOTOS) return new Response("Not found", { status: 404 });
     const object = await env.TIME_FREEZE_PHOTOS.get("time-freeze/brand/hero-cutout-3.png");
     if (!object) return new Response("Not found", { status: 404 });
-    const headers = new Headers(object.httpMetadata);
+    const headers = new Headers(object.httpMetadata || {});
+    headers.set("content-type", "image/png");
     headers.set("cache-control", "public, max-age=31536000, immutable");
+    if (object.httpEtag) headers.set("etag", object.httpEtag);
     return new Response(request.method === "HEAD" ? null : object.body, { headers });
   }
 
-  const slug = url.pathname.replace(/^\/media\//, "").split("?")[0];
-  const width = url.searchParams.get("w") || "1200";
-  const fmt = url.searchParams.get("fmt") || "webp";
+  // 2. Parse rawPath, cleanSlug, width, and format
+  const rawPath = url.pathname.replace(/^\/media\//, "").split("?")[0];
+  if (!rawPath) return new Response("Not found", { status: 404 });
+
+  const extMatch = rawPath.match(/\.(webp|avif|png|jpg|jpeg)$/i);
+  const ext = extMatch ? extMatch[1].toLowerCase() : null;
+  const cleanSlug = ext ? rawPath.replace(/\.(webp|avif|png|jpg|jpeg)$/i, "") : rawPath;
+
+  const width = url.searchParams.get("w");
+  const fmt = (url.searchParams.get("fmt") || ext || "webp").toLowerCase();
 
   const photos = await getPhotos(env);
-  const photo = photos.find((p) => p.slug === slug || p.id === slug);
-  if (!photo) return new Response("Not found", { status: 404 });
+  const photo = photos.find(
+    (p) =>
+      p.slug === cleanSlug ||
+      p.id === cleanSlug ||
+      p.slug === rawPath ||
+      p.id === rawPath
+  );
 
-  const categoryFolder = photo.category.toLowerCase().replace(/[^a-z0-9]/g, "-");
-  const r2Key = `time-freeze/${categoryFolder}/${photo.slug}/${width}.${fmt}`;
+  const candidateKeys = [];
+
+  if (photo) {
+    const basePath = photo.key ? photo.key.replace(/\/\d+\.(webp|avif)$/i, "") : null;
+
+    if (basePath) {
+      if (width) {
+        candidateKeys.push(`${basePath}/${width}.${fmt}`);
+        candidateKeys.push(`${basePath}/${width}.webp`);
+      }
+      if (fmt === "avif") {
+        candidateKeys.push(photo.key.replace(/\.webp$/i, ".avif"));
+      }
+      candidateKeys.push(photo.key);
+      if (photo.thumbnailKey) {
+        candidateKeys.push(photo.thumbnailKey);
+      }
+      if (Array.isArray(photo.availableWidths)) {
+        for (const w of photo.availableWidths) {
+          candidateKeys.push(`${basePath}/${w}.${fmt}`);
+          candidateKeys.push(`${basePath}/${w}.webp`);
+        }
+      }
+      for (const w of [1200, 1170, 800, 480]) {
+        candidateKeys.push(`${basePath}/${w}.${fmt}`);
+        candidateKeys.push(`${basePath}/${w}.webp`);
+      }
+    } else {
+      if (photo.key) candidateKeys.push(photo.key);
+      if (photo.thumbnailKey) candidateKeys.push(photo.thumbnailKey);
+    }
+
+    const categoryFolders = [
+      (photo.category || "").toLowerCase().replace(/&/g, "").replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "").replace(/-+/g, "-"),
+      (photo.category || "").toLowerCase().replace(/[^a-z0-9]/g, "-"),
+      (photo.category || "").toLowerCase().replace(/\s*&\s*/g, "---").replace(/[^a-z0-9-]/g, ""),
+    ];
+    for (const cat of categoryFolders) {
+      if (!cat) continue;
+      candidateKeys.push(`time-freeze/${cat}/${photo.slug}/1200.webp`);
+      candidateKeys.push(`time-freeze/${cat}/${photo.slug}/1170.webp`);
+      candidateKeys.push(`time-freeze/${cat}/${photo.slug}/800.webp`);
+      candidateKeys.push(`time-freeze/${cat}/${photo.slug}/480.webp`);
+      if (width) candidateKeys.push(`time-freeze/${cat}/${photo.slug}/${width}.${fmt}`);
+    }
+  }
+
+  // 3. Fallback direct R2 keys
+  candidateKeys.push(rawPath);
+  candidateKeys.push(`time-freeze/${rawPath}`);
+  candidateKeys.push(`hero/${rawPath}`);
+  candidateKeys.push(`time-freeze/brand/${rawPath}`);
+  candidateKeys.push(`time-freeze/uploads/${rawPath}`);
+  candidateKeys.push(`time-freeze/uploads/${cleanSlug}.webp`);
+  candidateKeys.push(`time-freeze/brand/${cleanSlug}.png`);
 
   if (!env || !env.TIME_FREEZE_PHOTOS) return new Response("Storage not configured", { status: 404 });
-  const object = await env.TIME_FREEZE_PHOTOS.get(r2Key) || await env.TIME_FREEZE_PHOTOS.get(photo.key);
+
+  const uniqueCandidateKeys = [...new Set(candidateKeys.filter(Boolean))];
+  let object = null;
+  for (const key of uniqueCandidateKeys) {
+    try {
+      object = await env.TIME_FREEZE_PHOTOS.get(key);
+      if (object) break;
+    } catch {}
+  }
+
   if (!object) return new Response("Not found", { status: 404 });
 
-  const headers = new Headers(object.httpMetadata);
+  const headers = new Headers(object.httpMetadata || {});
   headers.set("cache-control", "public, max-age=31536000, immutable");
-  headers.set("etag", object.httpEtag);
+  if (object.httpEtag) headers.set("etag", object.httpEtag);
+
+  let contentType = object.httpMetadata?.contentType;
+  if (!contentType || contentType === "application/octet-stream") {
+    if (fmt === "webp" || rawPath.endsWith(".webp")) contentType = "image/webp";
+    else if (fmt === "avif" || rawPath.endsWith(".avif")) contentType = "image/avif";
+    else if (fmt === "png" || rawPath.endsWith(".png")) contentType = "image/png";
+    else if (fmt === "jpg" || fmt === "jpeg" || rawPath.endsWith(".jpg") || rawPath.endsWith(".jpeg")) contentType = "image/jpeg";
+    else contentType = "image/webp";
+  }
+  headers.set("content-type", contentType);
+
   return new Response(request.method === "HEAD" ? null : object.body, { headers });
 };
 

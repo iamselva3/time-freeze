@@ -59,9 +59,11 @@ export default function App() {
       .catch(() => {});
   }, []);
 
-  // Initialize Lenis smooth scroll for client site
+  // Initialize Lenis smooth scroll for client site (desktop only; mobile uses fast native momentum scrolling)
   useEffect(() => {
     if (isAdmin) return;
+    const isTouch = window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 768;
+    if (isTouch) return;
 
     const lenis = new Lenis({
       duration: 1.2,
@@ -124,7 +126,7 @@ export default function App() {
   }
 
   return (
-    <div className="relative min-h-screen bg-[#0B0A09] text-[#F5EFE6]">
+    <div className="relative min-h-screen bg-[#0B0A09] text-[#F5EFE6] w-full max-w-full overflow-x-hidden">
       {/* 1. Cinematic Splash Screen */}
       {!splashDone && (
         <SplashScreen onComplete={() => setSplashDone(true)} />
@@ -137,7 +139,7 @@ export default function App() {
       {splashDone && <Navigation activeSection={activeSection} />}
 
       {/* 4. Sequential Narrative Chapters */}
-      <main>
+      <main className="w-full max-w-full overflow-x-hidden">
         <HeroSection content={content} photos={photos} />
         <FrozenMomentsSection photos={photos} />
         <ChaptersSection photos={photos} />

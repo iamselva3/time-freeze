@@ -40,14 +40,14 @@ export default function Navigation({ activeSection = 'hero' }) {
     <>
       {/* 1. Header Navigation Bar (Transforms to sleek floating dock on scroll) */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out pointer-events-none ${
-          scrolled ? 'py-3 px-4 sm:px-8' : 'py-5 px-6 sm:px-12'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out pointer-events-none w-full max-w-full overflow-hidden ${
+          scrolled ? 'py-2.5 px-3 sm:px-8' : 'py-3.5 sm:py-5 px-3.5 sm:px-12'
         }`}
       >
         <div
-          className={`pointer-events-auto mx-auto flex items-center justify-between transition-all duration-500 ${
+          className={`pointer-events-auto mx-auto w-full flex items-center justify-between transition-all duration-500 ${
             scrolled
-              ? 'max-w-4xl rounded-full bg-[#0E0D0C]/90 backdrop-blur-2xl border border-gold-600/20 px-4 sm:px-6 py-2 shadow-[0_16px_45px_rgba(0,0,0,0.95)]'
+              ? 'max-w-4xl rounded-full bg-[#0E0D0C]/90 backdrop-blur-2xl border border-gold-600/20 px-3.5 sm:px-6 py-2 shadow-[0_16px_45px_rgba(0,0,0,0.95)]'
               : 'max-w-7xl border border-transparent'
           }`}
         >
@@ -153,43 +153,43 @@ export default function Navigation({ activeSection = 'hero' }) {
 
       {/* 3. Full-Screen Maroon Overlay Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-[#120202]/95 backdrop-blur-2xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-between p-8 sm:p-14 lg:p-20 overflow-y-auto ${
+        className={`fixed inset-0 z-40 bg-[#120202]/95 backdrop-blur-2xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-between p-5 sm:p-14 lg:p-20 overflow-y-auto overflow-x-hidden ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
         <div className="absolute inset-0 bg-noise opacity-30 pointer-events-none" />
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-oxblood-600/20 blur-[140px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[min(500px,100vw)] h-[min(500px,100vw)] rounded-full bg-oxblood-600/20 blur-[140px] pointer-events-none overflow-hidden" />
 
         {/* Top bar inside menu */}
-        <div className="relative z-10 flex items-center justify-between border-b border-gold-500/20 pb-6">
-          <div className="flex items-center gap-3">
-            <img src="/brand/logo-badge.png" alt="Logo" className="w-10 h-10 object-contain" />
-            <span className="font-serif text-lg tracking-widest-luxury text-gold-300">
+        <div className="relative z-10 flex items-center justify-between border-b border-gold-500/20 pb-4 sm:pb-6">
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <img src="/brand/logo-badge.png" alt="Logo" className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
+            <span className="font-serif text-base sm:text-lg tracking-widest-luxury text-gold-300">
               TIME FREEZE
             </span>
           </div>
           <button
             onClick={closeMenu}
-            className="text-xs font-sans tracking-widest text-gold-400/80 hover:text-gold-200 border border-gold-500/30 px-4 py-2 rounded-full"
+            className="text-[11px] sm:text-xs font-sans tracking-widest text-gold-400/80 hover:text-gold-200 border border-gold-500/30 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full"
           >
             CLOSE ✕
           </button>
         </div>
 
         {/* Navigation Chapters */}
-        <nav className="relative z-10 py-10 sm:py-14 my-auto">
-          <ul className="flex flex-col gap-4 sm:gap-6 max-w-4xl">
+        <nav className="relative z-10 py-6 sm:py-14 my-auto">
+          <ul className="flex flex-col gap-3 sm:gap-6 max-w-4xl">
             {CHAPTERS.map((item) => (
               <li key={item.id} className="group overflow-hidden">
                 <a
                   href={`#${item.id}`}
                   onClick={closeMenu}
-                  className="flex items-baseline gap-4 sm:gap-8 transition-transform duration-500 group-hover:translate-x-3"
+                  className="flex items-baseline gap-3 sm:gap-8 transition-transform duration-500 group-hover:translate-x-3"
                 >
-                  <span className="font-sans text-xs sm:text-sm text-gold-500/60 tracking-widest">
+                  <span className="font-sans text-[11px] sm:text-sm text-gold-500/60 tracking-widest">
                     {item.num}
                   </span>
-                  <span className="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-ivory-100 group-hover:text-gold-gradient transition-all duration-300">
+                  <span className="font-serif text-2xl sm:text-5xl lg:text-6xl font-light text-ivory-100 group-hover:text-gold-gradient transition-all duration-300">
                     {item.title}
                   </span>
                   <ArrowUpRight

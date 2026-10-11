@@ -162,7 +162,7 @@ export default function HeroSection({ content, photos }) {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden bg-[#0B0A09] select-none pt-12 sm:pt-14 lg:pt-16 pb-6 px-6 sm:px-12 lg:px-20"
+      className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden bg-[#0B0A09] select-none pt-20 sm:pt-24 lg:pt-16 pb-8 px-4 sm:px-12 lg:px-20"
       style={{
         background: 'linear-gradient(135deg, #090807 0%, #12100E 50%, #070605 100%)',
       }}
@@ -220,13 +220,13 @@ export default function HeroSection({ content, photos }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center flex-1 mt-0 sm:mt-1 mb-2">
           {/* Left Column: Timeless Editorial Typography (6 cols) */}
           <div className="lg:col-span-6 flex flex-col justify-center text-left pointer-events-auto">
-            <span className="font-sans text-[10px] tracking-super-wide text-gold-400/80 uppercase font-medium mb-3 block">
+            <span className="font-sans text-[10px] tracking-super-wide text-gold-400/80 uppercase font-medium mb-2.5 sm:mb-3 block">
               {heroData.kicker || 'SACRED WEDDINGS & HEIRLOOM PORTRAITS'}
             </span>
 
             <h1
-              className="font-serif font-light text-[#FDFBF7] tracking-wide leading-[1.06] mb-6"
-              style={{ fontSize: 'clamp(2.6rem, 5.2vw, 4.4rem)' }}
+              className="font-serif font-light text-[#FDFBF7] tracking-wide leading-[1.08] mb-4 sm:mb-6"
+              style={{ fontSize: 'clamp(2.1rem, 6.5vw, 4.4rem)' }}
             >
               {heroData.titleLine1 || 'TIME FREEZES.'}{' '}
               <span className="italic font-normal text-gold-gradient block sm:inline">
@@ -235,16 +235,16 @@ export default function HeroSection({ content, photos }) {
               {heroData.titleLine2Text || 'ENDURES.'}
             </h1>
 
-            <p className="font-sans font-light text-sm sm:text-base text-ivory-200/80 leading-relaxed mb-8 max-w-lg">
+            <p className="font-sans font-light text-xs sm:text-base text-ivory-200/80 leading-relaxed mb-6 sm:mb-8 max-w-lg">
               {heroData.description ||
                 'Unposed elegance, painterly golden light, and heirloom photographs for the days you never want to let go.'}
             </p>
 
             {/* Primary Booking Call-To-Action */}
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2.5 bg-gradient-to-r from-oxblood-800 to-oxblood-900 hover:from-oxblood-700 hover:to-oxblood-800 text-gold-100 font-sans text-xs tracking-widest uppercase px-7 py-4 rounded-full border border-gold-500/30 shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 group"
+                className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-oxblood-800 to-oxblood-900 hover:from-oxblood-700 hover:to-oxblood-800 text-gold-100 font-sans text-xs tracking-widest uppercase px-6 sm:px-7 py-3.5 sm:py-4 rounded-full border border-gold-500/30 shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 group"
                 data-cursor="BOOK"
               >
                 <span>{heroData.ctaText || 'Reserve Your Shoot'}</span>
@@ -256,16 +256,16 @@ export default function HeroSection({ content, photos }) {
 
               <a
                 href="#chapters"
-                className="inline-flex items-center gap-2 glass-panel hover:bg-gold-500/10 text-gold-200 text-xs font-sans tracking-widest uppercase px-6 py-4 rounded-full border border-gold-500/20 hover:border-gold-400/40 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 glass-panel hover:bg-gold-500/10 text-gold-200 text-xs font-sans tracking-widest uppercase px-5 sm:px-6 py-3.5 sm:py-4 rounded-full border border-gold-500/20 hover:border-gold-400/40 transition-all duration-300"
               >
                 <span>Explore Portfolios</span>
               </a>
             </div>
 
             {/* Photographer Byline */}
-            <div className="mt-8 pt-6 border-t border-gold-500/15 flex items-center gap-3">
-              <div className="w-2 h-2 rounded-full bg-gold-400" />
-              <span className="font-sans text-[10px] tracking-widest text-ivory-300/60 uppercase">
+            <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gold-500/15 flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-gold-400 shrink-0" />
+              <span className="font-sans text-[9.5px] sm:text-[10px] tracking-widest text-ivory-300/60 uppercase">
                 Directed by Bhuvan · Principal Fine Art Photographer
               </span>
             </div>
@@ -273,7 +273,7 @@ export default function HeroSection({ content, photos }) {
 
           {/* Right Column: LARGE, STATELY CUTOUT PORTRAITS WITH SMOOTH SWIPE & WORDS BEHIND (6 cols) */}
           <div
-            className="lg:col-span-6 relative flex flex-col items-center justify-center min-h-[460px] sm:min-h-[520px] lg:min-h-[580px] pointer-events-auto cursor-grab active:cursor-grabbing"
+            className="lg:col-span-6 relative flex flex-col items-center justify-center min-h-[320px] sm:min-h-[480px] lg:min-h-[580px] pointer-events-auto cursor-grab active:cursor-grabbing my-3 lg:my-0"
             onMouseLeave={handleMouseUp}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
@@ -284,13 +284,13 @@ export default function HeroSection({ content, photos }) {
           >
             {/* AESTHETIC EDITORIAL WORDS BEHIND THE PHOTO (Creates Magazine Cover Depth) */}
             <div
-              className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none z-0"
+              className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none z-0 overflow-hidden"
               style={{
                 transform: `translate3d(${mousePos.x * 15}px, ${mousePos.y * 10}px, 0)`,
               }}
             >
               <span
-                className="font-serif text-[18vw] sm:text-[14vw] lg:text-[11vw] font-light tracking-[0.16em] uppercase whitespace-nowrap leading-none select-none transition-all duration-700"
+                className="font-serif text-[13vw] sm:text-[14vw] lg:text-[11vw] font-light tracking-[0.08em] sm:tracking-[0.16em] uppercase whitespace-nowrap leading-none select-none transition-all duration-700"
                 style={{
                   background:
                     'linear-gradient(180deg, rgba(246, 227, 176, 0.16) 0%, rgba(232, 197, 122, 0.08) 50%, rgba(255, 255, 255, 0.01) 100%)',
@@ -300,13 +300,13 @@ export default function HeroSection({ content, photos }) {
               >
                 TIME FREEZE
               </span>
-              <span className="font-sans text-[9px] sm:text-[11px] tracking-[0.45em] text-gold-400/30 uppercase -mt-2 sm:-mt-4 transition-opacity duration-700">
+              <span className="font-sans text-[8px] sm:text-[11px] tracking-[0.3em] sm:tracking-[0.45em] text-gold-400/30 uppercase mt-0 sm:-mt-4 transition-opacity duration-700">
                 {heroSlides[currentSlide].archiveTag}
               </span>
             </div>
 
             {/* Portrait Stage Container with Crossfade & Parallax Slide */}
-            <div className="relative z-10 w-full max-w-[460px] sm:max-w-[540px] lg:max-w-[600px] h-[460px] sm:h-[540px] lg:h-[600px] flex items-center justify-center pointer-events-none select-none">
+            <div className="relative z-10 w-full max-w-[320px] sm:max-w-[480px] lg:max-w-[600px] h-[320px] sm:h-[480px] lg:h-[600px] flex items-center justify-center pointer-events-none select-none">
               {heroSlides.map((slide, idx) => {
                 const isActive = idx === currentSlide;
                 const isLeft = (currentSlide - 1 + heroSlides.length) % heroSlides.length === idx;
@@ -334,7 +334,7 @@ export default function HeroSection({ content, photos }) {
                     <img
                       src={slide.src}
                       alt={slide.alt}
-                      className="w-full h-auto object-contain max-h-[72vh] lg:max-h-[78vh] transition-all duration-700 pointer-events-none"
+                      className="w-full h-auto object-contain max-h-[50vh] sm:max-h-[72vh] lg:max-h-[78vh] transition-all duration-700 pointer-events-none"
                       style={{
                         filter: 'drop-shadow(0 15px 35px rgba(0, 0, 0, 0.45))',
                       }}
@@ -352,7 +352,6 @@ export default function HeroSection({ content, photos }) {
               })}
             </div>
 
-
             {/* Floating Luxury Prev/Next Chevrons */}
             <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-between z-20 pointer-events-none px-1 sm:px-3">
               <button
@@ -361,10 +360,10 @@ export default function HeroSection({ content, photos }) {
                   e.stopPropagation();
                   prevSlide();
                 }}
-                className="pointer-events-auto w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-gold-500/20 border border-gold-500/25 hover:border-gold-400/60 flex items-center justify-center text-gold-300 hover:text-gold-100 transition-all duration-300 active:scale-95 shadow-lg backdrop-blur-md group"
+                className="pointer-events-auto w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-gold-500/20 border border-gold-500/25 hover:border-gold-400/60 flex items-center justify-center text-gold-300 hover:text-gold-100 transition-all duration-300 active:scale-95 shadow-lg backdrop-blur-md group"
                 aria-label="Previous Portrait"
               >
-                <ChevronLeft size={18} className="group-hover:-translate-x-0.5 transition-transform" />
+                <ChevronLeft size={16} className="group-hover:-translate-x-0.5 transition-transform" />
               </button>
               <button
                 type="button"
@@ -372,15 +371,15 @@ export default function HeroSection({ content, photos }) {
                   e.stopPropagation();
                   nextSlide();
                 }}
-                className="pointer-events-auto w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-gold-500/20 border border-gold-500/25 hover:border-gold-400/60 flex items-center justify-center text-gold-300 hover:text-gold-100 transition-all duration-300 active:scale-95 shadow-lg backdrop-blur-md group"
+                className="pointer-events-auto w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-gold-500/20 border border-gold-500/25 hover:border-gold-400/60 flex items-center justify-center text-gold-300 hover:text-gold-100 transition-all duration-300 active:scale-95 shadow-lg backdrop-blur-md group"
                 aria-label="Next Portrait"
               >
-                <ChevronRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
+                <ChevronRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
               </button>
             </div>
 
             {/* Bottom Swipe Indicators & Editorial Capsule */}
-            <div className="relative z-20 mt-3 sm:mt-5 flex flex-col items-center gap-2 pointer-events-auto">
+            <div className="relative z-20 mt-2 sm:mt-5 flex flex-col items-center gap-1.5 sm:gap-2 pointer-events-auto">
               <style>{`
                 @keyframes heroProgressFill {
                   0% { width: 0%; }
@@ -389,7 +388,7 @@ export default function HeroSection({ content, photos }) {
               `}</style>
 
               {/* Pagination Pills with 5-second auto-swipe progress bar */}
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-gold-500/25 shadow-lg">
+              <div className="flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-gold-500/25 shadow-lg">
                 {heroSlides.map((slide, i) => (
                   <button
                     key={slide.id}
@@ -399,10 +398,10 @@ export default function HeroSection({ content, photos }) {
                       setCurrentSlide(i);
                     }}
                     aria-label={`View ${slide.title}`}
-                    className={`h-2 rounded-full relative overflow-hidden transition-all duration-300 ${
+                    className={`h-1.5 sm:h-2 rounded-full relative overflow-hidden transition-all duration-300 ${
                       i === currentSlide
-                        ? 'w-10 bg-gold-950/60 border border-gold-400/40'
-                        : 'w-2 bg-gold-400/25 hover:bg-gold-400/50'
+                        ? 'w-8 sm:w-10 bg-gold-950/60 border border-gold-400/40'
+                        : 'w-1.5 sm:w-2 bg-gold-400/25 hover:bg-gold-400/50'
                     }`}
                   >
                     {i === currentSlide && (
@@ -419,7 +418,7 @@ export default function HeroSection({ content, photos }) {
               </div>
 
               {/* Minimalist Slide Meta */}
-              <div className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-ivory-300/60 font-sans">
+              <div className="flex items-center gap-2 text-[9px] sm:text-[10px] tracking-widest uppercase text-ivory-300/60 font-sans">
                 <span className="text-gold-400 font-medium">0{currentSlide + 1} / 0{heroSlides.length}</span>
                 <span>·</span>
                 <span className="text-ivory-200 tracking-wider font-light">{heroSlides[currentSlide].title}</span>
@@ -431,15 +430,15 @@ export default function HeroSection({ content, photos }) {
         {/* ============================================================== */}
         {/* BOTTOM METADATA & STATS STRIP                                  */}
         {/* ============================================================== */}
-        <div className="pt-6 border-t border-gold-500/15 flex flex-col sm:flex-row sm:items-center justify-between gap-6 mt-6">
+        <div className="pt-5 sm:pt-6 border-t border-gold-500/15 flex flex-col sm:flex-row sm:items-center justify-between gap-5 sm:gap-6 mt-4 sm:mt-6">
           {/* Stats Counters */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-10">
             {stats.map((st, i) => (
               <div key={i} className="flex flex-col text-left">
-                <span className="font-serif text-2xl sm:text-3xl text-gold-gradient font-medium">
+                <span className="font-serif text-xl sm:text-2xl lg:text-3xl text-gold-gradient font-medium">
                   {st.number}
                 </span>
-                <span className="font-sans text-[9px] tracking-super-wide text-ivory-300/60 uppercase mt-0.5">
+                <span className="font-sans text-[8.5px] sm:text-[9px] tracking-super-wide text-ivory-300/60 uppercase mt-0.5">
                   {st.label}
                 </span>
               </div>
@@ -448,10 +447,10 @@ export default function HeroSection({ content, photos }) {
 
           {/* South Indian Heritage Note */}
           <div className="text-left sm:text-right">
-            <span className="font-serif italic text-xs text-ivory-300/70 block">
+            <span className="font-serif italic text-[11px] sm:text-xs text-ivory-300/70 block">
               "Honest stories, unhurried light, and photographs that feel like home."
             </span>
-            <span className="font-sans text-[9px] tracking-widest text-gold-400 uppercase font-semibold block mt-1">
+            <span className="font-sans text-[8.5px] sm:text-[9px] tracking-widest text-gold-400 uppercase font-semibold block mt-1">
               EST. 2016 — TIME FREEZE STUDIO
             </span>
           </div>

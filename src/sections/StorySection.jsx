@@ -5,27 +5,27 @@ export default function StorySection({ content }) {
   const story = content?.story || {};
 
   return (
-    <section id="story" className="relative w-full min-h-screen bg-[#0E0D0C] py-28 px-6 sm:px-12 lg:px-20 select-none flex items-center">
+    <section id="story" className="relative w-full min-h-screen bg-[#0E0D0C] py-16 sm:py-24 px-4 sm:px-12 lg:px-20 select-none flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-noise opacity-30 pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full bg-gold-500/10 blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[min(500px,90vw)] h-[min(500px,90vw)] rounded-full bg-gold-500/10 blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full">
         {/* Section Header */}
-        <div className="flex items-center gap-2.5 text-gold-400 mb-4">
+        <div className="flex items-center gap-2.5 text-gold-400 mb-3 text-left">
           <span className="font-sans text-[10px] tracking-super-wide uppercase">
             {story.eyebrow || 'OUR PHILOSOPHY — CHAPTER 05'}
           </span>
         </div>
 
         {/* Split Layout: Portrait Left / Narrative Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           {/* Left: Photographer Portrait Card (5 cols) */}
           <div className="lg:col-span-5 relative group">
             {/* Ambient Gold Halo */}
             <div className="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-oxblood-700/40 via-gold-500/20 to-transparent blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
 
-            <div className="relative rounded-2xl overflow-hidden glass-panel border border-gold-400/40 aspect-[4/5] shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden glass-panel border border-gold-400/40 aspect-[4/5] max-w-[420px] mx-auto shadow-2xl">
               {/* Portrait Image (Using Soulful Heritage Portrait or Artist Photo) */}
               <img
                 src="/media/ancient-madurai-heritage-portrait?w=800&fmt=webp"
@@ -37,16 +37,16 @@ export default function StorySection({ content }) {
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/30 to-transparent" />
 
               {/* Brass Plate Signature Tag */}
-              <div className="absolute bottom-6 inset-x-6 z-10 glass-panel border border-gold-400/50 p-4 rounded-xl flex items-center justify-between">
+              <div className="absolute bottom-3 inset-x-3 sm:bottom-6 sm:inset-x-6 z-10 glass-panel border border-gold-400/50 p-2.5 sm:p-4 rounded-xl flex items-center justify-between text-left">
                 <div>
-                  <h4 className="font-serif text-lg text-ivory-100 font-medium">
+                  <h4 className="font-serif text-base sm:text-lg text-ivory-100 font-medium">
                     Bhuvan
                   </h4>
-                  <span className="font-sans text-[9px] tracking-super-wide text-gold-400 uppercase">
+                  <span className="font-sans text-[8.5px] sm:text-[9px] tracking-super-wide text-gold-400 uppercase">
                     Founder & Principal Artist
                   </span>
                 </div>
-                <div className="font-serif text-xs italic text-gold-300/80">
+                <div className="font-serif text-[11px] sm:text-xs italic text-gold-300/80">
                   @bhuvan.official
                 </div>
               </div>
@@ -55,7 +55,7 @@ export default function StorySection({ content }) {
 
           {/* Right: Narrative Philosophy (7 cols) */}
           <div className="lg:col-span-7 flex flex-col justify-center text-left">
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#FDFBF7] font-light leading-tight mb-8">
+            <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl text-[#FDFBF7] font-light leading-tight mb-6 sm:mb-8">
               {story.titleLead || 'Life happens in the'}{' '}
               <span className="italic font-normal text-gold-gradient block sm:inline">
                 {story.titleAccent || 'unspoken second.'}

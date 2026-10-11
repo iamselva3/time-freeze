@@ -145,14 +145,18 @@ export default defineConfig({
         server.middlewares.use(async (req, res, next) => {
           const url = new URL(req.url, `http://${req.headers.host}`);
 
-          // 1. Media streaming handler
+          // 1. Media streaming handler (Streams directly from Cloudflare R2)
           if (url.pathname.startsWith('/media/')) {
             const rawSlug = url.pathname.replace(/^\/media\//, '').split('?')[0];
+            const cleanSlug = rawSlug.replace(/\.(webp|avif|png|jpg|jpeg)$/i, '');
+            const extMatch = rawSlug.match(/\.(webp|avif|png|jpg|jpeg)$/i);
+            const ext = extMatch ? extMatch[1].toLowerCase() : null;
+            const fmt = (url.searchParams.get('fmt') || ext || 'webp').toLowerCase();
             const width = url.searchParams.get('w');
 
-            // Hero cutouts
+            // Hero cutouts / brand assets
             if (rawSlug.startsWith('hero-cutout')) {
-              const filename = rawSlug.endsWith('.png') ? rawSlug : `${rawSlug}.png`;
+              const filename = cleanSlug.endsWith('.png') ? cleanSlug : `${cleanSlug}.png`;
               const cutoutPath = path.join(projectRoot, 'public', 'brand', filename);
               if (fs.existsSync(cutoutPath)) {
                 res.writeHead(200, {
@@ -173,45 +177,86 @@ export default defineConfig({
               } catch {}
             }
 
-            // Check local file in public/media/
-            const sizedPath = width
-              ? path.join(mediaDir, `${rawSlug}-${width}.webp`)
-              : null;
-            const normalPath = path.join(mediaDir, `${rawSlug}.webp`);
+            // Stream from Cloudflare R2
+            const manifest = getManifest();
+            const item = manifest.find(
+              (p) =>
+                p.slug === cleanSlug ||
+                p.id === cleanSlug ||
+                p.slug === rawSlug ||
+                p.id === rawSlug
+            );
 
-            const targetLocal =
-              sizedPath && fs.existsSync(sizedPath)
-                ? sizedPath
-                : fs.existsSync(normalPath)
-                ? normalPath
-                : null;
+            const candidateKeys = [];
+            if (item) {
+              const basePath = item.key ? item.key.replace(/\/\d+\.(webp|avif)$/i, '') : null;
+              if (basePath) {
+                if (width) {
+                  candidateKeys.push(`${basePath}/${width}.${fmt}`);
+                  candidateKeys.push(`${basePath}/${width}.webp`);
+                }
+                if (fmt === 'avif') {
+                  candidateKeys.push(item.key.replace(/\.webp$/i, '.avif'));
+                }
+                candidateKeys.push(item.key);
+                if (item.thumbnailKey) {
+                  candidateKeys.push(item.thumbnailKey);
+                }
+                if (Array.isArray(item.availableWidths)) {
+                  for (const w of item.availableWidths) {
+                    candidateKeys.push(`${basePath}/${w}.${fmt}`);
+                    candidateKeys.push(`${basePath}/${w}.webp`);
+                  }
+                }
+                for (const w of [1200, 1170, 800, 480]) {
+                  candidateKeys.push(`${basePath}/${w}.${fmt}`);
+                  candidateKeys.push(`${basePath}/${w}.webp`);
+                }
+              } else {
+                if (item.key) candidateKeys.push(item.key);
+                if (item.thumbnailKey) candidateKeys.push(item.thumbnailKey);
+              }
 
-            if (targetLocal) {
-              res.writeHead(200, {
-                'Content-Type': 'image/webp',
-                'Cache-Control': 'public, max-age=31536000, immutable',
-              });
-              return fs.createReadStream(targetLocal).pipe(res);
+              const categoryFolders = [
+                (item.category || '').toLowerCase().replace(/&/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-'),
+                (item.category || '').toLowerCase().replace(/[^a-z0-9]/g, '-'),
+                (item.category || '').toLowerCase().replace(/\s*&\s*/g, '---').replace(/[^a-z0-9-]/g, ''),
+              ];
+              for (const cat of categoryFolders) {
+                if (!cat) continue;
+                candidateKeys.push(`time-freeze/${cat}/${item.slug}/1200.webp`);
+                candidateKeys.push(`time-freeze/${cat}/${item.slug}/1170.webp`);
+                candidateKeys.push(`time-freeze/${cat}/${item.slug}/800.webp`);
+                candidateKeys.push(`time-freeze/${cat}/${item.slug}/480.webp`);
+                if (width) candidateKeys.push(`time-freeze/${cat}/${item.slug}/${width}.${fmt}`);
+              }
             }
 
-            // Fallback to Cloudflare R2
-            const manifest = getManifest();
-            const item = manifest.find((p) => p.slug === rawSlug || p.id === rawSlug);
+            candidateKeys.push(rawSlug);
+            candidateKeys.push(`time-freeze/${rawSlug}`);
+            candidateKeys.push(`hero/${rawSlug}`);
+            candidateKeys.push(`time-freeze/brand/${rawSlug}`);
+            candidateKeys.push(`time-freeze/uploads/${rawSlug}`);
+            candidateKeys.push(`time-freeze/uploads/${cleanSlug}.webp`);
+            candidateKeys.push(`time-freeze/brand/${cleanSlug}.png`);
 
-            if (item) {
-              const categoryFolder = item.category.toLowerCase().replace(/[^a-z0-9]/g, '-');
-              const r2Key = `time-freeze/${categoryFolder}/${item.slug}/${width || '1200'}.webp`;
+            const uniqueKeys = [...new Set(candidateKeys.filter(Boolean))];
+            for (const k of uniqueKeys) {
               try {
-                const r2File = await fetchFromR2(r2Key);
+                const r2File = await fetchFromR2(k);
                 if (r2File) {
+                  let contentType = r2File.contentType;
+                  if (!contentType || contentType === 'application/octet-stream') {
+                    contentType = fmt === 'png' ? 'image/png' : fmt === 'avif' ? 'image/avif' : 'image/webp';
+                  }
                   res.writeHead(200, {
-                    'Content-Type': r2File.contentType,
+                    'Content-Type': contentType,
                     'Cache-Control': 'public, max-age=31536000, immutable',
                   });
                   return res.end(r2File.buffer);
                 }
               } catch (e) {
-                console.error('R2 fetch error:', e);
+                // Try next candidate
               }
             }
 
